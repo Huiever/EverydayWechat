@@ -52,13 +52,14 @@ def get_rtcalendar(date=''):
                 suit = suit if suit else '无'
                 avoid = data_dict['avoid']
                 avoid = avoid if avoid else '无'
-                return_text = '{data} {week} 农历{lunarCalendar} {solarTerms}\n【宜】{suit}\n【忌】{avoid}'.format(
+                #return_text = '{data} {week} 农历{lunarCalendar} {solarTerms}\n【宜】{suit}\n【忌】{avoid}'.format(
+                return_text = '{data} {week} 农历{lunarCalendar} {solarTerms}'.format(
                     data=data_dict['date'],
                     week=WEEK_DICT[data_dict['weekDay']],
                     lunarCalendar=data_dict['lunarCalendar'],
                     solarTerms=solar_terms,
-                    suit=suit,
-                    avoid=avoid,
+                    #suit=suit,
+                    #avoid=avoid,
                 )
                 return return_text
             else:

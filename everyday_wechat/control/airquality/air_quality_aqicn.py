@@ -50,7 +50,8 @@ def get_air_quality(city):
                     if key >= aqi:
                         air_status = AIR_STATUS_DICT[key]
                         break
-                aqi_info = '{city} PM2.5：{aqi} {air_status}'.format(city=city, aqi=aqi, air_status=air_status)
+                #aqi_info = '{city} PM2.5：{aqi} {air_status}'.format(city=city, aqi=aqi, air_status=air_status)
+                aqi_info = '【PM2.5】：{aqi} {air_status}'.format(city=city, aqi=aqi, air_status=air_status)
                 # print(aqi_info)
                 return aqi_info
             else:
